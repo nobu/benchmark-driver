@@ -87,7 +87,7 @@ config = BenchmarkDriver::Config.new.tap do |c|
     o.on('--timeout SECONDS', Float, 'Timeout ruby command execution with timeout(1)') do |v|
       timeout = v
     end if (os = RbConfig::CONFIG['host_os']) && os.match(/linux/) && system("which timeout > #{File::NULL}") # depending on coreutils for now...
-    o.on('-v', '--verbose', 'Verbose mode. Multiple -v options increase visilibity (max: 2)') do |v|
+    o.on('-v', '--verbose', 'Verbose mode. Multiple -v options increase visibility (max: 2)') do |v|
       c.verbose += 1
     end
   end
